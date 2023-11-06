@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(back3.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 8px;
+            box-shadow: 0 0 120px rgba(19, 19, 19, 0.1),0 0 90px rgba(8, 0, 0, 0.1);
+        }
+        .form-group1{
+             
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+        
+        .form-group1 input{
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+        }
+        .form-group2{
+            display: flex;
+           
+        }
+        .form-group2 select{
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: transparent;
+            box-sizing: border-box;
+        }
+
+        .gender{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            margin-left: 50px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            background-color: transparent;
+        }
+
+        .form-group .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group .radio-group label {
+            margin-right: 15px;
+        }
+
+        .form-group .sub {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .form-group .checkbox-group .form-check {
+            margin-bottom: 8px;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .form-buttons button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background-color: #63f287;
+            color: #0e0d0d;
+        }
+        .btn-submit:hover {
+            background-color: #68f868;
+            color: #0b0a0a;
+        }
+
+        .btn-cancel {
+            background-color: #6c757d;
+            color: #0a0a0a;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 120px; 
+            height: 120px;/* Adjust as needed */
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <div class="logo">
+        <img src="girl.jpeg" alt="Logo" style="border-radius: 50%;">
+    </div>
+    <form>
+        <div class="form-group1">
+            <center>
+            <div>  
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" placeholder="Enter student name" style="color: black;">
+       
+        </div>
+     </center> 
+     <center>
+        <div>
+            <label for="registrationNo">Registration No</label>
+            <input type="text" id="registrationNo" placeholder="Enter registration number">
+           
+        </div> 
+    </center> 
+        
+    </div>
+    <br>
+    <br>
+    <hr style="color: black;">
+
+        <div class="form-group2 radio-group">
+             
+            <div>
+                <br>
+            <label for="department">Department</label>
+            <select id="department">
+                <option value="dept1">Department 1</option>
+                <option value="dept2">Department 2</option>
+            </select>
+        </div>
+         
+        <div class="gender">
+            <br>
+            
+            <label>Gender</label>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </label> 
+            </div>
+           
+        </div>
+
+        <br>
+        <br>
+    <hr style="color: black;">
+
+        <div class="form-group checkbox-group">
+            <div class="sub">
+            <label>Subjects</label>
+            <br>
+            <div class="form-check">
+                <label for="subject1">
+                    <input type="checkbox" id="subject1" value="subject1"> Subject 1
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="subject2">
+                    <input type="checkbox" id="subject2" value="subject2"> Subject 2
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="subject3">
+                    <input type="checkbox" id="subject1" value="subject1"> Subject 3
+                </label>
+            </div>
+            <div class="form-check">
+                <label for="subject4">
+                    <input type="checkbox" id="subject2" value="subject2"> Subject 4
+                </label>
+            </div>
+            </div>
+          <div>
+            <br>
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder="Enter comments" rows="3"></textarea>
+        </div>
+        </div>
+
+        <hr>
+
+        <div class="form-buttons">
+            <button type="submit" class="btn-submit">Submit</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
